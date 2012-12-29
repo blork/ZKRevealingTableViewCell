@@ -166,8 +166,8 @@ static char BOOLRevealing;
 	objc_setAssociatedObject(self, &BOOLRevealing, [NSNumber numberWithBool:revealing], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 	[self didChangeValueForKey:@"isRevealing"];
 	
-	if (self.isRevealing && [self.delegate respondsToSelector:@selector(cellDidReveal:)])
-		[self.delegate cellDidReveal:self];
+	if (self.isRevealing && [self.delegate respondsToSelector:@selector(cellDidReveal:inDirection:)])
+		[self.delegate cellDidReveal:self inDirection:self._lastDirection];
 }
 
 - (BOOL)_shouldReveal
