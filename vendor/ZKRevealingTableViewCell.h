@@ -41,7 +41,7 @@ typedef enum {
 - (BOOL)cellShouldReveal:(ZKRevealingTableViewCell *)cell;
 - (void)cellDidBeginPan:(ZKRevealingTableViewCell *)cell;
 - (void)cellDidReveal:(ZKRevealingTableViewCell *)cell inDirection:(ZKRevealingTableViewCellDirection) direction;
-
+- (void)cellDidHide:(ZKRevealingTableViewCell *)cell;
 @end
 
 @interface ZKRevealingTableViewCell : UITableViewCell
