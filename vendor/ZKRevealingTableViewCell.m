@@ -183,7 +183,8 @@ static char BOOLRevealing;
 
 - (void)_pan:(UIPanGestureRecognizer *)recognizer
 {
-	
+    [self setSelected:NO animated:NO];
+
 	CGPoint translation           = [recognizer translationInView:self];
 	CGPoint currentTouchPoint     = [recognizer locationInView:self];
 	CGPoint velocity              = [recognizer velocityInView:self];
